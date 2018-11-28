@@ -1,4 +1,4 @@
-# serverless-101-openwhisk
+# Serverless Openwhisk Intro
 Learn about serverless through 10 minutes labs done solely in a browser, and later in the terminal. If you like it give me a star.
 
 ## the browser based examples - no installation!
