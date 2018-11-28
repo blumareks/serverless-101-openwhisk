@@ -13,11 +13,87 @@ The following links provide you with some simple examples on using Serverless fr
 
 Here comes some simple examples to run in your terminal. Please check the following pages to test the serverless:
 
-- *Java* - [link to Cloud Function documentation](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions)
+- **Java** - [link to Cloud Function documentation](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions)
 - other languages tbc.
 
-## the full examples
+### JAVA based terminal example
 
+In this section you will create a serverless action, and invoke it in the cloud.
+In order to preceed furhter you need [JVM8 - check it out here](http://openjdk.java.net/install/). To make sure just write:
+```bash
+$ java -version
+```
+
+and the possible output:
+
+```bash
+java version "1.8.0_181"
+Java(TM) SE Runtime Environment (build 1.8.0_181-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)
+```
+
+Then create a file ```Hello.java```:
+```bash
+$ cat > Hello.java
+```
+
+And copy - paste the following file:
+```java
+ import com.google.gson.JsonObject;
+ public class Hello {
+     public static JsonObject main(JsonObject args) {
+         String name = "stranger";
+         if (args.has("name"))
+             name = args.getAsJsonPrimitive("name").getAsString();
+         JsonObject response = new JsonObject();
+         response.addProperty("greeting", "Hello " + name + "!");
+         return response;
+     }
+ }
+```
+
+Before you can compile it, you need to add gson to the ```CLASSPATH``` from [maven repo - hit download](https://search.maven.org/artifact/com.google.code.gson/gson/2.8.5/jar)
+
+
+```bash
+#assuming that you downloaded gson.jar to the current directory:
+$ pwd
+/your-path-to-the-file/
+
+$ export CLASSPATH=/your-path-to-the-file/gson-2.8.5.jar
+```
+
+And the final steps include compiling the file:
+```bash
+$ javac Hello.java
+$ jar cvf hello.jar Hello.class
+```
+
+If that finished without the errors you can now create the action in the Cloud:
+```bash
+$ ibmcloud login 
+$ ibmcloud target --cf
+$ ibmcloud fn action create helloJava hello.jar --main Hello
+```
+
+You can see the action being registered in your dashboard - [link](https://console.bluemix.net/openwhisk/actions)
+
+Finally you can invoke the action:
+
+```bash
+$ ibmcloud fn action invoke --result helloJava --param name SVJUG
+
+{
+    "greeting": "Hello SVJUG!"
+}
+
+```
+
+More information on this example you will find here: https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions
+
+## the full examples for further hacking:
+
+Check out this examples to get into the advanced subjects with 
 - video analytics with AI in serverless batch jobs - [check Dark Vision app](https://github.com/IBM-Cloud/openwhisk-darkvisionapp)
 - Mobile Serverless backend as a Service - [a documented example for iOS](https://console.bluemix.net/docs/tutorials/serverless-mobile-backend.html#mobile-application-with-a-serverless-backend)
 - [an example for Android](https://github.com/IBM-Cloud/serverless-followupapp-android)
