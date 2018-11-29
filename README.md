@@ -17,6 +17,7 @@ Here comes some simple examples to run in your terminal. Please check the follow
 - other languages tbc.
 
 ### JAVA based terminal example
+Add ibmcloud CLI: https://console.bluemix.net/openwhisk/learn/cli
 
 In this section you will create a serverless action, and invoke it in the cloud.
 In order to preceed furhter you need [JVM8 - check it out here](http://openjdk.java.net/install/). To make sure just write:
