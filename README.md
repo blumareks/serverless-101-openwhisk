@@ -1,5 +1,7 @@
  # Serverless Openwhisk Intro
-Learn about serverless through 10 minutes labs done solely in a browser, and later in the terminal. If you like it give me a star. Find this site here: [ibm.biz/sv-serverless-2018](http://ibm.biz/sv-serverless-2018)
+Learn about serverless through 10 minutes labs done solely in a browser, and later in the terminal. If you like it give me a star. Find the short link to this site here: [ibm.biz/sv-serverless-2018](http://ibm.biz/sv-serverless-2018)
+
+You might want to undertake **a full 101 Serverless / Cloud Function Bootcamp** - the link is here: [github.com/IBM-Cloud/openwhisk-workshops](https://github.com/IBM-Cloud/openwhisk-workshops)
 
 ## the browser based examples - no installation!
 
