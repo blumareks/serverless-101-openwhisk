@@ -74,8 +74,9 @@ $ jar cvf hello.jar Hello.class
 
 If that finished without the errors you can now create the action in the Cloud:
 ```bash
+
 $ ibmcloud login 
-$ ibmcloud target --cf
+# I think you do not need this: $ ibmcloud target --cf
 $ ibmcloud fn action create helloJava hello.jar --main Hello
 ```
 
