@@ -10,7 +10,6 @@ The following links provide you with some simple examples on using Serverless fr
 - Here comes the signup link to use cloud functions with the free of charge light account - [ibm cloud](https://ibm.biz/BdY7jj)
 - check this first - [the link to the starter kit](https://console.bluemix.net/openwhisk)
 
-
 ## the terminal based examples
 
 Here comes some simple examples to run in your terminal. Please check the following pages to test the serverless:
@@ -99,6 +98,9 @@ More information on this example you will find here: https://console.bluemix.net
 
 Check out this examples to get into the advanced subjects with 
 - video analytics with AI in serverless batch jobs - [check Dark Vision app](https://github.com/IBM-Cloud/openwhisk-darkvisionapp)
+- https://github.com/csantanapr/ato-serverless-swift
+- serverless for mobile backend - https://www.ibm.com/blogs/bluemix/2018/01/performant-swift-serverless-actions/
+
 - Mobile Serverless backend as a Service - [a documented example for iOS](https://console.bluemix.net/docs/tutorials/serverless-mobile-backend.html#mobile-application-with-a-serverless-backend)
 - [an example for Android](https://github.com/IBM-Cloud/serverless-followupapp-android)
 
