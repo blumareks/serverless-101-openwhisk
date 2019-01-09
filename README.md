@@ -1,6 +1,6 @@
 # Serverless Openwhisk Intro
  
-Learn about serverless through 10 minutes labs done solely in a browser, and later in the terminal. If you like it give me a star. Find the short link to this site here: [ibm.biz/sv-serverless-2018](http://ibm.biz/sv-serverless-2018)
+Learn about serverless through 10 minutes labs done solely in a browser, and later in the terminal. If you like it give me a star. Find the short link to this site here: [ibm.biz/sv-serverless-2019](http://ibm.biz/sv-serverless-2019)
 
 Feel free to learn more from [the presentation attached - click here](Sadowski-Cloud-Functions-SSA-small.pdf).
 
@@ -96,6 +96,11 @@ $ ibmcloud fn action invoke --result helloJava --param name SVJUG
 ```
 
 More information on this example you will find here: https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions
+
+## mobile serverless backend as a service
+
+Find the following guide for building the mobile application with the serverless backend for mobile applications with Watson and Mobile Notifications:
+- [https://console.bluemix.net/docs/tutorials/serverless-mobile-backend.html?programming_language=swift#mobile-application-with-a-serverless-backend](https://console.bluemix.net/docs/tutorials/serverless-mobile-backend.html?programming_language=swift#mobile-application-with-a-serverless-backend)
 
 ## the full examples for further hacking:
 
