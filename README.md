@@ -108,8 +108,6 @@ Check out this examples to get into the advanced subjects with
 - video analytics with AI in serverless batch jobs - [check Dark Vision app](https://github.com/IBM-Cloud/openwhisk-darkvisionapp)
 - https://github.com/csantanapr/ato-serverless-swift
 - serverless for mobile backend - https://www.ibm.com/blogs/bluemix/2018/01/performant-swift-serverless-actions/
-
-- Mobile Serverless backend as a Service - [a documented example for iOS](https://console.bluemix.net/docs/tutorials/serverless-mobile-backend.html#mobile-application-with-a-serverless-backend)
 - [an example for Android](https://github.com/IBM-Cloud/serverless-followupapp-android)
 
 Please follow me on Twitter @blumareks
