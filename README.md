@@ -89,15 +89,34 @@ You can see the action being registered in your dashboard - [link](https://conso
 Finally you can invoke the action:
 
 ```bash
-$ ibmcloud fn action invoke --result helloJava --param name SVJUG
+$ ibmcloud fn action invoke --result helloJava --param name Marek
 
 {
-    "greeting": "Hello SVJUG!"
+    "greeting": "Hello Marek!"
 }
 
 ```
 
 More information on this example you will find here: https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions
+
+## adding REST API backend feature with API Gateway for OpenWhisk
+check this link on adding ```--web true``` option: https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-openwhisk_apigateway#openwhisk_apigateway
+
+check this commands:
+```
+$ ibmcloud fn action create helloJavaWeb hello.jar --main Hello --web true
+$ ibmcloud fn api create /hello /world get helloJavaWeb --response-type json
+
+ok: created API /hello/world GET for action /_/hello
+https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/<GENERATED_API_ID>/hello/world
+
+$ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/<GENERATED_API_ID>/hello/world?name=OpenWhisk
+
+{
+"payload": "Hello world OpenWhisk"
+}
+
+```
 
 ## mobile serverless backend as a service
 
