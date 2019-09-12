@@ -4,7 +4,7 @@ Learn about serverless through 10 minutes labs done solely in a browser, and lat
 
 Feel free to learn more from [the presentation attached - click here](Sadowski-Cloud-Functions-SSA-small.pdf).
 
-You need a LITE Cloud account to do the labs - here comes the signup link to use cloud functions with the free of charge lite account (IBM wants just your email) - [ibm cloud](https://ibm.biz/BdYtWL)
+You need a LITE Cloud account to do the labs - here comes the signup link to use cloud functions with the free of charge lite account (IBM wants just your email) - [ibm cloud](https://ibm.biz/BdzcZt)
 
 You might want to take **a full 101 Serverless / Cloud Function Bootcamp** - the link is here: [github.com/IBM-Cloud/openwhisk-workshops](https://github.com/IBM-Cloud/openwhisk-workshops)
 
