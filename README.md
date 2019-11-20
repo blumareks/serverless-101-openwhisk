@@ -19,11 +19,57 @@ The following links provide you with some simple examples on using Serverless fr
 
 Here comes some simple examples to run in your terminal. Please check the following pages to test the serverless:
 
+- **Swift** - see below
 - **Java** - [link to Cloud Function documentation](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions)
 - other languages tbc.
 
+### Swift based terminal example
+Add ibmcloud CLI: https://cloud.ibm.com/functions/learn/cli - check the basic steps to log in, and setup environment. When you are ready to get all the existing actions with the following command follow steps below to create an action in Swift:
+
+```
+$ ibmcloud fn list
+```
+
+Step 1. Clone the template repository
+```
+$ git clone https://github.com/ibm-functions/template-hello-world.git
+```
+
+Step 2. check the directory and the `manifest` file
+```
+$ cd template-hello-world/runtimes/swift/
+```
+
+Step 3. change the swift code in the `actions/helloworld.swift` file to the following
+
+```swift
+func main(args: [String:Any]) -> [String:Any] {
+  return [ "message" : "Hello World!" ]
+}
+```
+
+Step 4. Create the action
+```
+$PACKAGE_NAME=hello-world-serverless-swift-cli ibmcloud fn deploy -m manifest.yaml
+```
+
+Step 5. Call the action
+
+```
+$ ibmcloud fn action invoke --result hello-world-serverless-swift-cli/helloworld
+```
+
+Step 6. You are also able to update the action
+
+```
+$ ibmcloud fn action update hello-world-serverless-swift-cli/helloworld actions/helloworld.swift 
+```
+
+You should receive the response: `ok: updated action hello-world-serverless-swift-cli/helloworld`
+
+
 ### JAVA based terminal example
-Add ibmcloud CLI: https://console.bluemix.net/openwhisk/learn/cli
+Add ibmcloud CLI: https://cloud.ibm.com/functions/learn/cli
 
 In this section you will create a serverless action, and invoke it in the cloud.
 In order to preceed furhter you need [JVM8 - check it out here](http://openjdk.java.net/install/). To make sure just write:
