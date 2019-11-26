@@ -52,7 +52,7 @@ func main(args: [String:Any]) -> [String:Any] {
 **Step 4. Create the action**
 
 ```
-$PACKAGE_NAME=hello-world-serverless-swift-cli ibmcloud fn deploy -m manifest.yaml
+$ PACKAGE_NAME=hello-world-serverless-swift-cli ibmcloud fn deploy -m manifest.yaml
 ```
 
 **Step 5. Call the action**
