@@ -211,13 +211,16 @@ visual_recognition = VisualRecognitionV3(version=version, iam_apikey=apiKey)
 
 5. Click Save.
 
-6. add this JSON as input:
+6. add another parameter: 
+- `"imageUrl"` and the value: `"https://raw.githubusercontent.com/beemarie/ow-vr/master/images/puppy.jpg"`
+
+I will add description on how to add the JSON as an input shortly:
 ```JSON
 {
   "imageUrl":"https://raw.githubusercontent.com/beemarie/ow-vr/master/images/puppy.jpg"
 }
 ```
-Test it! Did it work?
+7. Test it! Did it work? If yes, try other URLs with awesome pictures. **How many calls you can make for free?**
 
 ## mobile serverless backend as a service
 
