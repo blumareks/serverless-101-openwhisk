@@ -21,6 +21,7 @@ Here comes some simple examples to run in your terminal. Please check the follow
 
 - **Swift** - see below
 - **Java** - [link to Cloud Function documentation](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#creating-java-actions)
+- Python - see below
 - other languages tbc.
 
 ### Swift based terminal example
@@ -167,6 +168,42 @@ $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/<GENERATED_
 }
 
 ```
+
+## Python example with Watson VR from UI
+The Python runtime includes the Watson Developer Cloud SDKs (Software Development Kits) including the visual recognition SDK you can use. Please import this visual recognition SDK to make calls to the service in a python-native way.
+1. Replace the hello world Python code with the following code, found on the next page. You can copy paste this code:
+```python
+from watson_developer_cloud import VisualRecognitionV3
+
+def main(params):
+    # init visual recognition library
+    apiKey = params['apiKey']
+    version = "2018-03-19"
+    visual_recognition = VisualRecognitionV3(version=version, iam_apikey=apiKey)
+
+    # get image url from params
+    image_url = params['imageUrl']
+
+    # parse visual recognition return data for our tags
+    tags = ""
+    classifiedImages = visual_recognition.classify(url=image_url).get_result()
+    image = classifiedImages['images'][0]
+    classes = image['classifiers'][0]['classes']
+    for theClass in classes:
+        currentTag = theClass['class']
+        print(currentTag)
+        tags = tags + currentTag + ", "
+    result = {'classes': tags}
+    return result
+```
+
+add this JSON as input:
+```JSON
+{
+  "imageUrl":"https://raw.githubusercontent.com/beemarie/ow-vr/master/images/puppy.jpg"
+}
+```
+Test it! Did it work?
 
 ## mobile serverless backend as a service
 
