@@ -171,6 +171,7 @@ $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/<GENERATED_
 
 ## Python example with Watson VR from UI
 The Python runtime includes the Watson Developer Cloud SDKs (Software Development Kits) including the visual recognition SDK you can use. Please import this visual recognition SDK to make calls to the service in a python-native way.
+
 1. Replace the hello world Python code with the following code, found on the next page. You can copy paste this code:
 ```python
 from watson_developer_cloud import VisualRecognitionV3
@@ -197,7 +198,20 @@ def main(params):
     return result
 ```
 
-add this JSON as input:
+2. This action expects the apiKey to be passed in as a parameter.
+```
+ init visual recognition library
+apiKey = params['apiKey']
+version = "2018-03-19"
+visual_recognition = VisualRecognitionV3(version=version, iam_apikey=apiKey)
+```
+
+3. Default parameters can be set for an action, rather than passing the parameters into the action every time. This is a useful option for data that stays the same on every invocation. Let’s set the apiKey as one of our default parameters. Click Parameters in the left side menu, and then click ```Add Parameter +```.
+4. For parameter name, ```apiKey```, with a capital ```K```. For parameter value, insert your apiKey value enclosed in quotation marks.
+
+5. Click Save.
+
+6. add this JSON as input:
 ```JSON
 {
   "imageUrl":"https://raw.githubusercontent.com/beemarie/ow-vr/master/images/puppy.jpg"
