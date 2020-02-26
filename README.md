@@ -1,5 +1,9 @@
 # Serverless Openwhisk Intro
  
+ 
+**Are you looking for a gitbook with updated materials? 
+It is here: [ibm.biz/sv-serverless-2020](http://ibm.biz/sv-serverless-2020)!**
+ 
 Learn about serverless through 10 minutes labs done solely in a browser, and later in the terminal. If you like it give me a star. Find the short link to this site here: [ibm.biz/sv-serverless-2019](http://ibm.biz/sv-serverless-2019)
 
 Feel free to learn more from [the presentation attached - click here](Sadowski-Cloud-Functions-SSA-small.pdf).
